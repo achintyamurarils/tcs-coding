@@ -1,0 +1,19 @@
+N = input()
+d={}
+t=1
+a="abcdefghijklmnopqrstuvwxyz"
+for i in range(len(N)):
+    if(N[i] not in d):
+        d[N[i]]=1
+for i in range(len(a)):
+    if(a[i] not in d):
+        t=0
+if(t==0):
+    print("not a panagram")
+else:
+    print("yes it is a panagram")
+
+
+    
+        
+    

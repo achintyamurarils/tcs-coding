@@ -1,0 +1,7 @@
+N = int(input())
+g = pow(N,4)
+h = str(g)
+if(h.endswith(str(N))):
+    print("yes")
+else:
+    print("no")

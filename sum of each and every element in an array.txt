@@ -1,0 +1,8 @@
+n = int(input())
+g=[]
+for i in range(n):
+    g.append(int(input()))
+c=0
+for i in range(n):
+    c=c+g[i]
+    print(c,sep=" ")

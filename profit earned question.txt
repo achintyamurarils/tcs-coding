@@ -1,0 +1,18 @@
+n = int(input())
+m = int(input())
+p = int(input())
+a=[]
+for i in range(n):
+    if(i==0):
+        a.append(m)
+    else:
+        p = int((p * m)/100)
+        m = p
+        a.append(m)
+        
+a.reverse()
+for i in range(n):
+    if(i==0):
+        print(a[i])
+
+        

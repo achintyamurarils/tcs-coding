@@ -1,0 +1,29 @@
+N = int(input())
+M = int(input())
+R = int(input())
+c1=0
+c2=0
+s1=0
+s2=0
+a=[]
+b=[]
+for i in range(N):
+    a.append(int(input()))
+    c1=c1-R
+    s1+=a[i]
+
+for i in range(M):
+    b.append(int(input()))
+    c2=c2-R
+    s2+=b[i]
+s1=s1+c1
+s2=s2+c2
+
+if(s1==s2):
+    print("equal")
+    g=0
+else:
+    g=s2-s1-R
+    
+    print(g)
+    

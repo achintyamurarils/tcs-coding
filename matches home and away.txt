@@ -1,0 +1,48 @@
+n = int(input())
+matches=[]
+g=int((n*(n+1))/2)
+y={}
+for i in range(g):
+    p=[]
+    a=input()
+    b=input()
+    c=input()
+    p.append(a)
+    p.append(b)
+    p.append(c)
+    matches.append(p)
+for i in range(g):
+    d=""
+    e=""
+    f=0
+    for j in (matches[i][2]):
+       
+       if(f==0 and j!="-"):
+           d+=j
+       elif(j=="-"):
+           f=1   
+       else:
+           e+=j
+    d1=int(d)
+    e1=int(e)
+    
+    if(d1>e1):
+        x=matches[i][0]
+        
+    if(d1<e1):
+        x=matches[i][1]
+        
+    if(d1!=e1):    
+        if(x in y.keys()):
+            y[x]+=3
+            
+        else:
+            y[x]=3
+            
+z=[0,0]
+for i in y:
+    if(y[i]>z[1]):
+        z=[i,y[i]]
+    
+print(z[0])
+print(z[1])

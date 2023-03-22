@@ -1,0 +1,32 @@
+2. Check length of a string is equal to the number appended at its last
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string g;
+    cin>>g;
+    int  t,i,v,num=0,x=1,f=1;
+    t=g.length();
+    v=t;
+    for(i=t-1;i>=0;i--)
+    {
+        if(g[i]>='0' && g[i]<='9')
+        {
+            v= v-1;
+            num= (g[i]-'0')*x + num;
+            x=x*10;
+            if(num>v)
+            {f=0;break;}
+        }
+        else{
+            if(num==v)
+            f=1;
+            else 
+            f=0;
+            break;
+        }
+    }
+    if(f==1)
+    cout<<"true";
+    else
+    cout<<"false";
+}

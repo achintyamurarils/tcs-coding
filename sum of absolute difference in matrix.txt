@@ -1,0 +1,26 @@
+
+n = int(input())
+v=[]
+ls=0
+rs=0
+for i in range(n):
+    l=[]
+    for j in range(n):
+        g = int(input())
+        l.append(g)
+        
+    v.append(l)
+for i in range(n):
+   
+    for j in range(n):
+        if(i==j):
+            ls+=v[i][j]
+            
+        if(i+j==n-1):
+            rs+=v[i][j]
+            
+
+s=abs(ls-rs)
+print(s)
+
+

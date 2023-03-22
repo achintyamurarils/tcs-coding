@@ -1,0 +1,10 @@
+N = input()
+forward_shift=""
+backward_shift=""
+forward_shift+=N[len(N)-1]+N[:len(N)-1]
+backward_shift+=N[1:]+N[0]
+if(forward_shift==backward_shift):
+    print("yes")
+else:
+    print("no")
+    

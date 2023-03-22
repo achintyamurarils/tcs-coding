@@ -1,0 +1,27 @@
+n = int(input())
+c1=0
+c2=0
+c0=0
+a=[]
+if(n>100):
+    print("no")
+else:
+    for i in range(n):
+        a.append(int(input()))
+        if(a[i]==0):
+            c0+=1
+        elif(a[i]==1):
+            c1+=1
+        else:
+            c2+=1
+    for i in range(n):
+        if(c1>0):
+            a[i]=1
+            c1-=1
+        elif(c0>0):
+            a[i]=0
+            c0-=1
+        else:
+            a[i]=2
+            c2-=1
+    print(a)

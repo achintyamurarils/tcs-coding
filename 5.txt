@@ -1,0 +1,50 @@
+cyclic rotation in array
+
+#include<bits/stdc++.h>
+using namespace std;
+vector<int> Func(vector<int>a,int n,int k)
+{
+ vector<int> g;
+ int i,j,l,t,p;
+ for(j=0;j<k;j++){
+     l=a[n-1];
+ for(i=0;i<n;i++)
+ {
+    if(i==0)
+    {   t=a[i];
+        a[i]=l;
+    }
+    else{
+        p=a[i];
+        a[i]=t;
+        t=p;
+    }
+ }
+ }
+ for(i=0;i<n;i++)
+ {
+     g.push_back(a[i]);
+ }
+ return g;
+}
+int main()
+{
+    int n,i,k,g;
+    cout<<"enter the size of array";
+    cin>>n;
+    vector<int> a,p;
+    cout<<"enter the array";
+    for(i=0;i<n;i++)
+    {  
+        cin>>g;
+        a.push_back(g);
+    }
+    cout<<"enter cycles";
+    cin>>k;
+    p=Func(a,n,k);
+    for(i=0;i<n;i++)
+    {
+        cout<<p[i]<<" ";
+    }
+    return 0;
+}

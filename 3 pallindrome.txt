@@ -1,0 +1,40 @@
+def Func(s):
+    
+    g=[]
+    
+    if(len(s)<3):
+        return None
+        
+    elif(len(s)==3):
+        g.append(s[0])
+        g.append(s[1])
+        g.append(s[2])
+        return g
+    else:
+        for i in range(1,len(s)-1):
+            if(s[:i]==s[:i][::-1]):
+            
+                
+                for j in range(i+1,len(s)):
+                    if(s[i:j]==s[i:j][::-1]and s[j:]==s[j:][::-1]):
+                        g.append(s[:i])
+                        g.append(s[i:j])
+                        g.append(s[j:])
+                        return g
+                        
+                        
+        if(len(g)==0):
+            return(None)
+        
+        else:
+            return(g)
+        
+            
+s=input()
+
+a=Func(s)
+if(a==None):
+    print("No pallindrome found")
+else:
+    for i in a:
+        print(i)
